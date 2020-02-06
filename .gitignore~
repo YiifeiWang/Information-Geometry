@@ -1,0 +1,8 @@
+.DS_store
+.gitignore
+*.xml
+*.thm
+*.aux
+*.out
+*.log
+*.pdf

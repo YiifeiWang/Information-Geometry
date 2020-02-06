@@ -1,0 +1,250 @@
+%Copyright Yifei Wang 2019
+
+%Theorem-like environments configuration
+%\usepackage[standard,thmmarks,amsmath]{ntheorem}
+%{
+%	\theoremstyle{plain}
+%	\theoremheaderfont{\bfseries}
+%	\theorembodyfont{\normalfont\itshape}
+%	\theoremsymbol{\mbox{$\Box$}}
+%	\newtheorem{rremark}{Remark}
+%}
+\usepackage[standard]{ntheorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{lems}{Lemma}[section]
+
+
+
+%List-like environments configuration
+\usepackage{enumitem}
+
+%Program list environments
+\usepackage{listings}
+
+%Formula support
+\usepackage{amsmath}
+
+\newenvironment{eqt}{\begin{equation}\begin{aligned}}{\end{aligned}\end{equation}}
+\newtheorem{problem}{Problem}
+\newtheorem{exercise}{Exercise}
+
+
+%color support
+\usepackage{xcolor}
+\definecolor{grey}{RGB}{202,202,202}
+
+%下划线和高亮
+\usepackage{soul}
+\sethlcolor{grey}
+
+% 一些快捷键
+\newcommand{\dm}{displaymath}
+\newcommand{\p}{\partial}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+
+% combination
+\newcommand{\pp}[1]{\left(#1\right)}
+\newcommand{\bb}[1]{\left[#1\right]}
+\newcommand{\lra}[1]{\left\langle #1\right\rangle}
+\newcommand{\lr}[1]{\left #1\right}
+\newcommand{\norm}[1]{\left\| #1\right\|}
+\newcommand{\lbb}[1]{\left\{\begin{aligned} #1\end{aligned}\right.}
+\newcommand{\ldr}[1]{\left. #1\right|}
+\newcommand{\bmbm}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ket}[1]{\left| #1\right\rangle}
+
+% latin
+\newcommand{\blbd}{\boldsymbol{\lambda}}
+
+% text
+\newcommand{\ac}{\operatorname{ac}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dist}{\operatorname{dis}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\Dens}{\operatorname{Dens}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Exp}{\operatorname{Exp}}
+\newcommand{\gl}{\operatorname{gl}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\Hor}{\operatorname{Hor}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\KL}{\operatorname{KL}}
+\newcommand{\MMD}{\operatorname{MMD}}
+\newcommand{\Prox}{\operatorname{Prox}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\prox}{\operatorname{prox}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\tsign}{\operatorname{sign}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Ver}{\operatorname{Ver}}
+\newcommand{\vvec}{\operatorname{vec}}
+% mathbf
+\newcommand{\mfa}{\mathbf{a}}
+\newcommand{\mfb}{\mathbf{b}}
+\newcommand{\mfc}{\mathbf{c}}
+\newcommand{\mfd}{\mathbf{d}}
+\newcommand{\mfe}{\mathbf{e}}
+\newcommand{\mff}{\mathbf{f}}
+\newcommand{\mfg}{\mathbf{g}}
+\newcommand{\mfh}{\mathbf{h}}
+\newcommand{\mfi}{\mathbf{i}}
+\newcommand{\mfj}{\mathbf{j}}
+\newcommand{\mfk}{\mathbf{k}}
+\newcommand{\mfl}{\mathbf{l}}
+\newcommand{\mfm}{\mathbf{m}}
+\newcommand{\mfn}{\mathbf{n}}
+\newcommand{\mfo}{\mathbf{o}}
+\newcommand{\mfp}{\mathbf{p}}
+\newcommand{\mfq}{\mathbf{q}}
+\newcommand{\mfr}{\mathbf{r}}
+\newcommand{\mfs}{\mathbf{s}}
+\newcommand{\mft}{\mathbf{t}}
+\newcommand{\mfu}{\mathbf{u}}
+\newcommand{\mfv}{\mathbf{v}}
+\newcommand{\mfw}{\mathbf{w}}
+\newcommand{\mfx}{\mathbf{x}}
+\newcommand{\mfy}{\mathbf{y}}
+\newcommand{\mfz}{\mathbf{z}}
+\newcommand{\mfA}{\mathbf{A}}
+\newcommand{\mfB}{\mathbf{B}}
+\newcommand{\mfC}{\mathbf{C}}
+\newcommand{\mfD}{\mathbf{D}}
+\newcommand{\mfE}{\mathbf{E}}
+\newcommand{\mfF}{\mathbf{F}}
+\newcommand{\mfG}{\mathbf{G}}
+\newcommand{\mfH}{\mathbf{H}}
+\newcommand{\mfI}{\mathbf{I}}
+\newcommand{\mfJ}{\mathbf{J}}
+\newcommand{\mfK}{\mathbf{K}}
+\newcommand{\mfL}{\mathbf{L}}
+\newcommand{\mfM}{\mathbf{M}}
+\newcommand{\mfN}{\mathbf{N}}
+\newcommand{\mfO}{\mathbf{O}}
+\newcommand{\mfP}{\mathbf{P}}
+\newcommand{\mfQ}{\mathbf{Q}}
+\newcommand{\mfR}{\mathbf{R}}
+\newcommand{\mfS}{\mathbf{S}}
+\newcommand{\mfT}{\mathbf{T}}
+\newcommand{\mfU}{\mathbf{U}}
+\newcommand{\mfV}{\mathbf{V}}
+\newcommand{\mfW}{\mathbf{W}}
+\newcommand{\mfX}{\mathbf{X}}
+\newcommand{\mfY}{\mathbf{Y}}
+\newcommand{\mfZ}{\mathbf{Z}}
+% mathbb
+\newcommand{\mbA}{\mathbb{A}}
+\newcommand{\mbB}{\mathbb{B}}
+\newcommand{\mbC}{\mathbb{C}}
+\newcommand{\mbD}{\mathbb{D}}
+\newcommand{\mbE}{\mathbb{E}}
+\newcommand{\mbF}{\mathbb{F}}
+\newcommand{\mbG}{\mathbb{G}}
+\newcommand{\mbH}{\mathbb{H}}
+\newcommand{\mbI}{\mathbb{I}}
+\newcommand{\mbJ}{\mathbb{J}}
+\newcommand{\mbK}{\mathbb{K}}
+\newcommand{\mbL}{\mathbb{L}}
+\newcommand{\mbM}{\mathbb{M}}
+\newcommand{\mbN}{\mathbb{N}}
+\newcommand{\mbO}{\mathbb{O}}
+\newcommand{\mbP}{\mathbb{P}}
+\newcommand{\mbQ}{\mathbb{Q}}
+\newcommand{\mbR}{\mathbb{R}}
+\newcommand{\mbS}{\mathbb{S}}
+\newcommand{\mbT}{\mathbb{T}}
+\newcommand{\mbU}{\mathbb{U}}
+\newcommand{\mbV}{\mathbb{V}}
+\newcommand{\mbW}{\mathbb{W}}
+\newcommand{\mbX}{\mathbb{X}}
+\newcommand{\mbY}{\mathbb{Y}}
+\newcommand{\mbZ}{\mathbb{Z}}
+% mathcal
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcE}{\mathcal{E}}
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcG}{\mathcal{G}}
+\newcommand{\mcH}{\mathcal{H}}
+\newcommand{\mcI}{\mathcal{I}}
+\newcommand{\mcJ}{\mathcal{J}}
+\newcommand{\mcK}{\mathcal{K}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcM}{\mathcal{M}}
+\newcommand{\mcN}{\mathcal{N}}
+\newcommand{\mcO}{\mathcal{O}}
+\newcommand{\mcP}{\mathcal{P}}
+\newcommand{\mcQ}{\mathcal{Q}}
+\newcommand{\mcR}{\mathcal{R}}
+\newcommand{\mcS}{\mathcal{S}}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcU}{\mathcal{U}}
+\newcommand{\mcV}{\mathcal{V}}
+\newcommand{\mcW}{\mathcal{W}}
+\newcommand{\mcX}{\mathcal{X}}
+\newcommand{\mcY}{\mathcal{Y}}
+\newcommand{\mcZ}{\mathcal{Z}}
+\newcommand{\msa}{\mathscr{a}}
+\newcommand{\msb}{\mathscr{b}}
+\newcommand{\msc}{\mathscr{c}}
+\newcommand{\msd}{\mathscr{d}}
+\newcommand{\mse}{\mathscr{e}}
+\newcommand{\msf}{\mathscr{f}}
+\newcommand{\msg}{\mathscr{g}}
+\newcommand{\msh}{\mathscr{h}}
+\newcommand{\msi}{\mathscr{i}}
+\newcommand{\msj}{\mathscr{j}}
+\newcommand{\msk}{\mathscr{k}}
+\newcommand{\msl}{\mathscr{l}}
+\newcommand{\msm}{\mathscr{m}}
+\newcommand{\msn}{\mathscr{n}}
+\newcommand{\mso}{\mathscr{o}}
+\newcommand{\msp}{\mathscr{p}}
+\newcommand{\msq}{\mathscr{q}}
+\newcommand{\msr}{\mathscr{r}}
+\newcommand{\mss}{\mathscr{s}}
+\newcommand{\mst}{\mathscr{t}}
+\newcommand{\msu}{\mathscr{u}}
+\newcommand{\msv}{\mathscr{v}}
+\newcommand{\msw}{\mathscr{w}}
+\newcommand{\msx}{\mathscr{x}}
+\newcommand{\msy}{\mathscr{y}}
+\newcommand{\msz}{\mathscr{z}}
+\newcommand{\msA}{\mathscr{A}}
+\newcommand{\msB}{\mathscr{B}}
+\newcommand{\msC}{\mathscr{C}}
+\newcommand{\msD}{\mathscr{D}}
+\newcommand{\msE}{\mathscr{E}}
+\newcommand{\msF}{\mathscr{F}}
+\newcommand{\msG}{\mathscr{G}}
+\newcommand{\msH}{\mathscr{H}}
+\newcommand{\msI}{\mathscr{I}}
+\newcommand{\msJ}{\mathscr{J}}
+\newcommand{\msK}{\mathscr{K}}
+\newcommand{\msL}{\mathscr{L}}
+\newcommand{\msM}{\mathscr{M}}
+\newcommand{\msN}{\mathscr{N}}
+\newcommand{\msO}{\mathscr{O}}
+\newcommand{\msP}{\mathscr{P}}
+\newcommand{\msQ}{\mathscr{Q}}
+\newcommand{\msR}{\mathscr{R}}
+\newcommand{\msS}{\mathscr{S}}
+\newcommand{\msT}{\mathscr{T}}
+\newcommand{\msU}{\mathscr{U}}
+\newcommand{\msV}{\mathscr{V}}
+\newcommand{\msW}{\mathscr{W}}
+\newcommand{\msX}{\mathscr{X}}
+\newcommand{\msY}{\mathscr{Y}}
+\newcommand{\msZ}{\mathscr{Z}}
+% boldsymbol
+\newcommand{\bxi}{\boldsymbol{\xi}}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+\newcommand{\bmu}{\boldsymbol{\mu}}

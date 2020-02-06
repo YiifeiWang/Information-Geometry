@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\RequirePackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{tabu}
+\usepackage{lipsum}
+\usepackage{essay-def}
+\usepackage{clrscode}
+\usepackage{caption}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicensure}{ \textbf{Output:}} %UseOutput in the format of Algorithm
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}} %Use Input in the format of Algorithm
+\usepackage{indentfirst}
+\RequirePackage[backend=bibtex, style=numeric, maxcitenames=1]{biblatex} 
+
+\pagestyle{plain}
+
+\geometry{
+	a4paper, includefoot, hmargin = 2.6cm, top = 2.7cm, bottom = 2cm,
+	headheight = 1.5cm, headsep = 0.5cm, footskip = 0.75cm
+}
+\linespread{1}
+
+\fancypagestyle{plain}{
+	\fancyhf{}\renewcommand*{\headrulewidth}{0.75bp}
+	\fancyhead[R]{\normalfont{Page \thepage{} of \pageref*{LastPage}}}
+	\fancyhead[L]{\normalfont{\cuniversity}}
+	\fancyhead[C]{\normalfont{\titlemark}}
+}
+
+\bibliography{../SIAM/DeepL}
+\usepackage{url}
+
+\newcommand{\cuniversity}{Peking University}
+\newcommand{\titlemark}{Notes for Information Geometry}
+\author{Yifei Wang 1500010611}
+\title{\textbf{\titlemark}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{1. Manifold, Divergence and Dually flat structure}
+
+\printbibliography
+\end{document}
