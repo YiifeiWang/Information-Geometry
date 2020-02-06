@@ -15,6 +15,7 @@
 \usepackage{caption}
 \usepackage{appendix}
 \usepackage{mathrsfs}
+\usepackage{bm}
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \renewcommand{\algorithmicensure}{ \textbf{Output:}} %UseOutput in the format of Algorithm
@@ -49,7 +50,68 @@
 \begin{document}
 \maketitle
 
-\section{1. Manifold, Divergence and Dually flat structure}
+\section{Manifold, Divergence and Dually flat structure}
+\textbf{Question}: what does the inner product mean in (1.93)? We try to provide an answer in the following example.
+\begin{example}[Tangent space]
+In this example, we will understand $\mfe_i,g_{i,j}(\theta),\mfe^{*i},g^{*i,j}(\theta^*)$ and verify the following relationship (definitions) via a concrete example of probability models. 
+$$
+\lra{\mfe_i,\mfe^{*j}}=\delta_{i,j}
+$$
+We assume that $\lra{\cdot,\cdot}$ is the standard Euclidean inner product.
+Here we simply take $\psi(\theta)=-\sum_i\log \theta^i$ with $\theta\in\mbR^n_+$. The dual of $\psi$ follows 
+$$
+\psi^*(\theta^*) = \max_\theta \theta^T\theta^*-\psi(\theta)=-\sum_i(1+\log(-\theta^*_i)).
+$$
+The relationship between $\theta$ and $\theta^*$ follows (not using the Einstein Summation Convention)
+$$
+\theta^i\theta^{*}_i=-1. 
+$$
+Now we proceed to compute $\mfe_i$. (Without the definition of coordinate curves)
+$\mfe_i$ shall satisfy
+$$
+\lra{\mfe_i,\mfe_j}=g_{i,j}(\theta)=\p_i\p_j\psi(\theta)=\delta_{i,j}\pp{\theta^i}^{-2}.
+$$
+In general,  we can take $\mfe_i =\pp{ \theta^i}^{-1}W_i$, where $W=[W_1,\dots,W_n]$ is orthogonal. 
+Then, we work on the dual affine coordinate. 
+$$
+\lra{\mfe^{*i},\mfe^{*j}}=g^{*i,j}(\theta^*)=\delta_{i,j}\pp{\theta^*_i}^{-2}.
+$$
+Similarly, we can take $\mfe^{*i} =\pp{ \theta^*_i}^{-1}\bar W_i$, where $\bar W=[\bar W_1,\dots,\bar W_n]$  is orthogonal. It is important to note that the following equation can \textbf{not} hold under the assumption that $\lra{\cdot,\cdot}$ is the standard Euclidean inner product.
+$$
+d\theta =\mfG^* d\theta^*.
+$$
+This is because it is assumed that
+$$
+ds = \lra{d\theta,d\theta} = \lra{d\theta^*,d\theta^*}.
+$$
+Hence, we assume that $d\theta = d\theta^*$. We note the following fact:
+$$d\theta^i=g^{*i,j}d\theta^*_j.$$
+Combing with  $d\theta=\mfe_id \theta^i$ and $d\theta^*=\mfe^{*i}d \theta_i^*$, this yields
+$$
+d\theta =\mfe_id\theta^i=\mfe_ig^{*i,j}d\theta_j^*,%\pp{ \theta^i}^{-1}W_id\theta^i=\pp{ \theta^i}^{-1}W_ig^{*i,j}d\theta^*_j=(\theta^i)^{-3}W_id\theta_i^*
+$$
+$$
+d\theta = d\theta^*=\mfe^{j*}d\theta_j^*,
+$$
+which implies
+$$
+\mfe_ig^{*j,i}=\mfe_ig^{*i,j}=\mfe^{j^*}.
+$$
+(Because $G^*$ is symmetric.) Hence, we have 
+$$
+\lra{\mfe_i,\mfe^{*j}}=\lra{\mfe_i,g^{*j,k}\mfe_k}=g^{*j,k}g_{i,k}=g_{i,k}g^{*k,j}=\delta_{i,j}
+$$
+In our example, this tells that
+$$
+(\theta_j^*)^{-2}(\theta^j)^{-1}W_j=(\theta_j^*)^{-1}\bar W_j,
+$$
+which tells $W_j=-\bar W_j$. Hence, we can also compute that
+$$
+\lra{\mfe_i,\mfe^{*j}}=\frac{1}{\theta^i\theta_j^*}\lra{W_i,\bar W_j}=\frac{-1}{\theta^i\theta_j^*}\lra{W_i,W_j}=\delta_{i,j}.
+$$
+\textbf{Summary} The previous derivation in this example fully based on the assumption that $\lra{\cdot,\cdot}$ is the standard Euclidean inner product. If this is not the case, then it is quite wield to define the inner product because $\lra{\cdot,\cdot}$ takes both the primal and dual affine coordinates.
+\end{example}
+
 
 \printbibliography
 \end{document}
