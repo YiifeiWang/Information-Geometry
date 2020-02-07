@@ -112,6 +112,41 @@ $$
 \textbf{Summary} The previous derivation in this example fully based on the assumption that $\lra{\cdot,\cdot}$ is the standard Euclidean inner product. If this is not the case, then it is quite wield to define the inner product because $\lra{\cdot,\cdot}$ takes both the primal and dual affine coordinates.
 \end{example}
 
+\section{Exponential families and mixture families of probability distribution}
+\subsection{Exponential family}
+We first collect several important definitions for exponential families. Consider the parametric probability density
+$$
+p(x,\theta) = \exp\{\theta^ih_i(x)-\psi(\theta)+k(x)\}.
+$$
+I would like to use $h_i$ instead of $x_i$ to denote $h_i(x)$. We can define a measure in sample space $\{h\}$, 
+$$
+d\mu(h) = \exp(k(x))dx.
+$$
+And we can write
+$$
+p(x,\theta)dx = p(h,\theta)d\mu(h)= \exp(\theta^Th-\psi(\theta))d\mu(h).
+$$
+We note that $\psi$ is a normalizing term which satisfies
+$$
+\psi(\theta) = \log\int \exp(\theta^Th)d\mu(h)
+$$
+The dual parameter is given by the Legendre transformation $\eta=\nabla \psi(\theta)$, which is the expectation of $h$ (or $x$):
+$$
+\eta = \mbE[h] = \int h p(h,\theta)d\mu(h)
+$$
+The Legendre dual $\phi(\eta)$ of $\psi(\theta)$ follows
+$$
+\phi(\eta) = \theta^T\eta-\psi(\theta) = \int p(h,\theta)\log p(h,\theta) d\mu(h).
+$$
+This is because $\log p(h,\theta)=\theta^Th-\psi(\theta)$. The metric follows
+$$
+g_{i,j}(\theta) = \p_i\p_j\psi(\theta) = \mbE_h[\p_i\log p(h,\theta)\p_j\log p(h,\theta)].
+$$
+\subsection{Mixture family}
+The density takes the form
+$$
+p(x,\eta)=\sum_{i=0}^n\eta_iq_i(x), \quad \sum_{i=0}^nq_i=1,\quad q_i>0
+$$
 
 \printbibliography
 \end{document}
